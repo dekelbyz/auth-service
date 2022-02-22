@@ -12,7 +12,7 @@ import { AuthController } from './auth.controller';
     UsersModule,
     PassportModule,
     JwtModule.register({
-      secret: process.env.JWT_SECRET,
+      secret: process.env.JWT_SECRET ?? 'SUPER_SECRET_TOKEN',
       signOptions: { expiresIn: '2h' },
     }),
   ],
