@@ -7,5 +7,4 @@ COPY . .
 RUN npm run build
 ENV PORT=${PORT}
 EXPOSE ${PORT}
-ENV MONGO_URL=mongodb://db
 CMD ["npm", "run", "start:prod"]
