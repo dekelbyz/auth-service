@@ -62,11 +62,11 @@ the `access_token` is expired within 2 hours.
 
 ## What should I do next?
 
-````bash
+```bash
   This is all!
-  You have gained your ```access_token``` successfully.
+  You have gained your access_token successfully.
   You can now address the messages micro-service and send messages to your friends!
-  (that is as long as the ```access_token``` is still valid of course).
-````
+  (that is as long as the access_token is still valid of course).
+```
 
 ## Author - Dekel Bayazi.
