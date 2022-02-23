@@ -1,7 +1,7 @@
 {
-  "name": "recreate",
+  "name": "auth-service",
   "version": "0.0.1",
-  "description": "",
+  "description": "this is an authentication micro-service I developed in order to improved home assignment provided to me by Tikal. find out more on README.md",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
