@@ -20,6 +20,7 @@ export class AuthController {
     return this.authService.login(user);
   }
 
+  /** making sure that the user's access_token is a valid JWT. */
   @UseGuards(JwtAuthGuard)
   @Get('validate')
   validateUser(@Request() req) {
