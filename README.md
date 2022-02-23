@@ -34,7 +34,13 @@ examples will be provided with the `axios` syntax.
 
 method: 'POST', <br>
 endpoint: 'users/register',<br>
-body-params: username: string, password: string <br>
+body-params: username: string, password: string <br><br>
+
+rules:
+
+```bash
+  BOTH USERNAME AND PASSWORD MUST BE TYPEOF STRING AND CONTAIN 3-10 CHARS AND SHALL NOT CONTAIN SPACES.
+```
 
 example:
 
