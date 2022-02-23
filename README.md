@@ -6,7 +6,7 @@
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
   <p align="center">This is a Nest.js authentication micro-service I wrote as
-Part of a home assignment provided to me by Tikal</p>
+part of a home assignment provided to me by Tikal</p>
     <p align="center">
 
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
@@ -48,7 +48,7 @@ example:
 axios.post('http://localhost:3000/users/register', params: {username: "ryandahl", password: "123456"})
 ```
 
-With that been done, we need to send a login request in order to receive a access_token.
+With that been done, we need to send a login request in order to receive an access_token.
 
 ## LOGIN
 
