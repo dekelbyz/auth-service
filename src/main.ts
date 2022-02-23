@@ -7,6 +7,8 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
+  /* Telling our app to use our pipe validations. */
   app.useGlobalPipes(new ValidationPipe());
   const PORT = process.env.PORT || 3000;
   await app.listen(PORT);
