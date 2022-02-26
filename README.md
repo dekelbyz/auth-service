@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://tkctl.tikalk.com/images/we-full-stack.png" width="320" alt="Nest Logo" /></a>
+  <a href="https://www.tikalk.com/" target="blank"><img src="https://tkctl.tikalk.com/images/we-full-stack.png" width="320" alt="Tikal Logo" /></a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
@@ -8,8 +8,21 @@
   <p align="center">This is a Nest.js authentication micro-service I wrote as part of a home assignment provided to me by Tikal</p>
     <p align="center">
 
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+  <div align="center">
+  <div style="display: flex;">
+    <a href="#">
+    <div style="display: flex;">
+        <img href="localhost" src="https://camo.githubusercontent.com/0d358238ba8c67946e6555aad926b947e1a5048f/68747470733a2f2f6e6573746a732e636f6d2f696d672f6c6f676f5f746578742e737667" height="94"/> 
+      <img src="https://i.ibb.co/tqHYP3q/pngwing-com.png" height="130"/> 
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"  height="94"/> 
+  </div>  
+        <div style="display: flex;">
+     <img src="https://ky-solutions.fr/nuxt/img/typescript.5c70a1d.png" height="95"/> 
+      <img src="https://logos-world.net/wp-content/uploads/2021/02/Docker-Logo-2013-2015.png" height="100"/> 
+    </div>
+    </a>
+    </div>
+</div>
 
 ## Description
 
@@ -34,6 +47,8 @@ examples will be provided with the `axios` syntax.
 ## Register
 
 **POST**
+
+<b>endpoints: /auth/register</b>
 
 | Type     | Name                        | Description                                  | Schema |
 | -------- | --------------------------- | -------------------------------------------- | ------ |
@@ -63,6 +78,8 @@ With that been done, we need to send a login request in order to receive an acce
 ## Login
 
 **POST**
+
+<b>endpoints: /auth/login</b>
 
 | Type     | Name                        | Description                                     | Schema |
 | -------- | --------------------------- | ----------------------------------------------- | ------ |
