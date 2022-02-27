@@ -39,8 +39,7 @@ The only way for a client to address the `messages micro-service` is by providin
 the `access_token` along with every http request he makes. <br> <br>
 (the way of doing that is by simply adding the token as a bearer token on the request headers)
 
-example path: `http://localhost:3000/` <br> <br>
-examples will be provided with the `axios` syntax.
+example path: `http://localhost:3000` <br> <br>
 
 <br><br><br>
 
@@ -48,7 +47,9 @@ examples will be provided with the `axios` syntax.
 
 **POST**
 
-<b>endpoints: /auth/register</b>
+<b>Endpoint: /auth/register</b>
+
+<b>Parameters:</b>
 
 | Type     | Name                        | Description                                  | Schema |
 | -------- | --------------------------- | -------------------------------------------- | ------ |
@@ -64,12 +65,25 @@ examples will be provided with the `axios` syntax.
 **EXAMPLE**
 
 ```bash
-axios.post(
-  'http://localhost:3000/auth/register',
-  params:{
-  username: "ryandahl",
-  password: "123456"
-  })
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const raw = JSON.stringify({
+  "username": "RyanDahl",
+  "password": "123456"
+});
+
+const requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("localhost:3000/users/register", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
 ```
 
 With that been done, we need to send a login request in order to receive an access_token.
@@ -79,7 +93,9 @@ With that been done, we need to send a login request in order to receive an acce
 
 **POST**
 
-<b>endpoints: /auth/login</b>
+<b>Endpoint: /auth/login</b>
+
+<b>Parameters: </b>
 
 | Type     | Name                        | Description                                     | Schema |
 | -------- | --------------------------- | ----------------------------------------------- | ------ |
@@ -89,12 +105,25 @@ With that been done, we need to send a login request in order to receive an acce
 example:
 
 ```bash
-axios.post(
-  'http://localhost:3000/auth/login',
-  params:{
-  username: "ryandahl",
-  password: "123456"
-  })
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const raw = JSON.stringify({
+  "username": "RyanDahl",
+  "password": "123456"
+});
+
+const requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:3000/auth/login", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
 ```
 
 The output of the login request contains the `access_token` variable. <br>
