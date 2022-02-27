@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { UsersService } from '../users/users.service';
 import { JwtService } from '@nestjs/jwt';
 import { compare } from 'bcrypt';
@@ -12,16 +12,19 @@ export class AuthService {
 
   async validateUser(username: string, pass: string) {
     const user = await this.usersService.findUserByName(username);
-
+    if (!user) {
+      throw new BadRequestException('Incorrect username or password');
+    }
     /* Compare between the hashed password in our db
        and the one that the user is trying to login with */
+
     const passwordMatchesToHash = await compare(pass, user.password);
 
     if (user && passwordMatchesToHash) {
       const { password, ...result } = user;
       return result;
     }
-    return null;
+    throw new BadRequestException('Incorrect username or password');
   }
 
   async login(user: any) {
