@@ -27,8 +27,7 @@
 ## Description
 
 This service handles our authentication / registeration http requests. <br>
-With that being so, we can secure our other micro-service, the one that I actually
-being asked to do. <br> <br><br>
+With that being so, we can secure our other micro-service (messages-service). <br> <br><br>
 
 ## Steps
 
